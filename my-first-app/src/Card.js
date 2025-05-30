@@ -14,7 +14,7 @@ function Card() {
         display: "inline-block",
     }
     return (
-        <div style={style}>
+        <div className="card">
             <img src={logo} className="card-logo" alt="logo" />
             <h1 className="card-title">Welcome to My First App</h1>
             <p className="card-description">This is a simple card component in React.</p>

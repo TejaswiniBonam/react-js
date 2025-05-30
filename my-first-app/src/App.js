@@ -33,9 +33,18 @@ function App() {
    ); */
    return (
     <>
+    {/* <Card/>
+    <Card/>
+    <Card/> */}
     <PropsExample name="Teja" lastName="B" empid={12345}/>
     <PropsExample name="John" lastName="Doe" empid={67890}/>
     <PropsExample name="Jane" lastName="Smith" empid={54321}/>
+    <PropsExample name="Alice" lastName="Johnson" empid={98765}/>
+    <PropsExample name="Bob" lastName="Brown" empid={11223}/>
+    <PropsExample name="Charlie" lastName="Davis" empid={44556}/>
+    <PropsExample name="Eve" lastName="Wilson" empid={77889}/>
+    <PropsExample name="Larry" />
+
     </>
    );
 

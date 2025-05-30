@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 function PropsExample(props){
     return(
         <div className="card">
@@ -9,7 +11,17 @@ function PropsExample(props){
     );
 }
 
+PropsExample.propTypes = {
+    name: propTypes.string,
+    lastName: propTypes.string,
+    empid: propTypes.number
+};
 
+PropsExample.defaultProps = {
+    name: "GUEST",
+    lastName: "NA",
+    empid: 0,
+};
 
 export default PropsExample;
 
