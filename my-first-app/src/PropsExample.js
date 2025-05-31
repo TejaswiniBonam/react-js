@@ -4,8 +4,8 @@ function PropsExample(props){
     return(
         <div className="card">
             <p> name : {props.name}</p>
-            <p> lastName : {props.lastName || 'NA'} </p>
-            <p> EmpID : {props.empid || 0}</p>
+            <p> lastName : {props.lastName} </p>
+            <p> EmpID : {props.empid}</p>
         </div>
             
     );
