@@ -6,10 +6,16 @@
         * **arch** - initial html doc is minimal, then browser downloads js files (which has logics components) then, react takes over and give content dynamically in the browser.
         * **flow** - user requests a page, server give min html and js bundles, broswer executes js and builds html. user sees content only after js execution
         * **UX** - intial load is slower, user see blank while js is being download and executed, Once app is loaded, Navigation gets faster and page is updated DYNAMICALLY without full reload (just needed parts of page gets reloaded not page). rich interactions, smooth transistions. 
+        * **SEO** - lower visibility in searches cuz hard to iindentify content which is dynamically done
+        * **performance** - Good but can vary based on user's device as rendering is done on browser
+        * **SUITS for SPA**
 * **Server side rendering (SSR)** - here, server generates full built html and sends fully rendered page
         * **arch** - sever take request and generate COMPLETE html
         * **flow** -  user eq a page - server fetch needed data and generate full HTML and send fully rendered page - user sees content immediately & js can enhance interactivity afterward based on user actions
         * **UX** - intial load is faster cuz user get fully rendered page, further interactions may require full page reloads, And the transitions may not be smooth
+        * **SEO** - aswe have fully rendered page, improves visibility
+        * **performance** - Server load might increase traffic cuz every interation a full loaded page should be rendered again aand again
+        * **Suits for e-commerce, content heavy sites**
 * **Search Engine Optimization (SEO)** - practice of enhancing a website's visibility and ranking on search engine results pages (SERPs)
 * **search engine results pages (SERPs)** - page displayed by a search engine in response to a user's query. it has types like organic results, paid, featured,, etc 
 * **AJAX**
