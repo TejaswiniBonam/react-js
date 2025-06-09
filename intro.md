@@ -1,11 +1,43 @@
-* It is used for building user interfaces, especially single-page applications.
+# React
+
+* It is used for building UI, especially single-page applications.
+
+* **Singple Page app** - a web app which dynamically rewrites current page rather than loading Entier thing from server- faster
+
+* Component based architecture (reusable, modular components)
 * Developed and maintained by Facebook.
 * Uses a component-based architecture.
 * Allows efficient updating and rendering of UI components.
 
+
+## Before react
+* **direct DOM manipulation** - 
+* **full page load** - 
+* **sphagetti code** - ??
+
 ## Why React
 
 React is a popular JavaScript library for building user interfaces. It enables developers to create fast, interactive, and scalable web applications by using reusable components and efficient rendering techniques.
+* resuable
+* state management
+* SPA
+* virtual DOM
+
+
+## MPA vs SPA
+| **MPA** | **SPA** |
+|---------|-----------|
+| seperate HTML pages | single htmp page |
+| content update with full page reload | without |
+| Each page has its own real URL | handled using JS routing like react router |
+| Amazon shopping web, LinkedIn | Gmail, Twitter, Fb (observe refreshing whenever clicks)|
+| slower | faster |
+| initial load faster | slower |
+
+
+
+
+
 
 ## Structure of a React App
 
