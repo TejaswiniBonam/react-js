@@ -33,6 +33,8 @@ React is a popular JavaScript library for building user interfaces. It enables d
 | Amazon shopping web, LinkedIn | Gmail, Twitter, Fb (observe refreshing whenever clicks)|
 | slower | faster |
 | initial load faster | slower |
+| SSR | CSR |
+| flicker UX | smooth |
 
 
 
