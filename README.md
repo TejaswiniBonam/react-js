@@ -8,7 +8,11 @@ https://youtu.be/JvENsHqWXfw?feature=shared
 
 https://roadmap.sh/react
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
 
+https://transform.tools/html-to-jsx
+
+https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-conditional-operator
 
 * react - 2013
 * Single page app vs traditional

@@ -138,6 +138,142 @@ Components are the building blocks of any React application.
 ## which is best?
 
 
+## JSX - JavaScrpt XML
+* syntax extenxion , used for UI 
+* HTML code in your Javascript
+* You have to close tags like <br />. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:
+
+```jsx
+const element = <h1>Hello, World!</h1>;
+const name = "Alice";
+const greeting = <p>Hello, {name}!</p>;
+
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />How do you do?</p>
+    </>
+  );
+}
+```
+
+## Adding Styless
+* Here we dont use 'class' cuz it's a reserved word Instead we use className
+* yiu CAN add LINK tag for css toooo
+```jsx
+<img className="avatar" />
+```
+```css
+/* In your CSS */
+.avatar {
+  border-radius: 50%;
+}
+```
+```js
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
+
+export default function Profile() {
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
+}
+```
+
+### displaying data
+* curly braces lets you **escape back** into js
+* can escape to js from JSX tooo like className="avatar" takes you to css BUT <img src = {link}> takes you to link vaiable
+* In {} we can put complex things too LIke concatenation of strings etc etc
+```jsx
+return (
+  <h1>
+    {user.name}
+  </h1>
+);
+```
+
+## JSX Attributes
+
+
+
+## Conditional Rendering
+```js
+let content;
+if (isLoggedIn) {
+  content = <AdminPanel />;
+} else {
+  content = <LoginForm />;
+}
+return (
+  <div>
+    {content}
+  </div>
+);
+```
+* u can use  conditional ? operator.  as well
+```js
+<div>
+  {isLoggedIn ? (
+    <AdminPanel />
+  ) : (
+    <LoginForm />
+  )}
+</div>
+```
+* when u dont need ELSE
+```js
+<div>
+  {isLoggedIn && <AdminPanel />}
+</div>
+```
+
+## Rendering Lists
+* Notice how <li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. 
+* Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items.
+```js
+function Lists(){
+    //const colors = ['red', 'green', 'blue', 'yellow'];
+    const colors = [{id: 1, name: 'red', rank: 1},
+                    {id: 2, name: 'green', rank: 2},
+                    {id: 3, name: 'blue', rank: 4},
+                    {id: 4, name: 'yellow', rank: 3}];
+    const listItems = colors.map((color, index) =>
+        <li key={color.id}>
+            {color.name} : {color.rank}
+        </li>
+    );
+    return(
+        <div>
+            <h1>Color List</h1>
+            <ul>
+                {listItems}
+            </ul>
+        </div>
+
+    );
+}
+export default Lists;
+```
+
+
+
+
+
 
 
 
