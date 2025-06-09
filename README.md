@@ -24,6 +24,7 @@
 * conditional rendering
 * list rendering
 * state management
+* named export, default export
 
 
 

@@ -98,7 +98,7 @@ These commands help you set up, run, and manage your React project efficiently.
 
 ## What is a Component?
 
-A **component** in React is a reusable, self-contained piece of UI. Components let you split the UI into independent, reusable parts, and think about each piece in isolation.
+A **component** in React is a reusable, self-contained piece of UI. Components let you split the UI into independent, reusable parts, and think about each piece in isolation. **SHOULD START WITHA CAPITAL LETTER**
 
 There are two main types of components in React:
 
@@ -133,6 +133,28 @@ class Welcome extends Component {
 - **Class Components:** Useful when you need advanced features like state and lifecycle methods (though hooks now allow state in functional components).
 
 Components are the building blocks of any React application.
+
+
+## which is best?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## What is State?
 
 **State** in React refers to a built-in object that stores property values that belong to a component. When the state of a component changes, React re-renders the component to reflect the new state in the UI.
