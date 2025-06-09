@@ -141,20 +141,6 @@ Components are the building blocks of any React application.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## What is State?
 
 **State** in React refers to a built-in object that stores property values that belong to a component. When the state of a component changes, React re-renders the component to reflect the new state in the UI.
