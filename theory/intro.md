@@ -351,4 +351,36 @@ function MyButton() {
 }
 ```
 * React will call your component function again. This time, count will be 1. Then it will be 2. And so on.
+* WHat if u render same component multiple timess??
+* each component will have it's own statesss
+```js
+import { useState } from 'react';
 
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+```
+* each button remembers it's own count
+
+## HOOKS
+* hooks - functions starting with "use" (useState)
