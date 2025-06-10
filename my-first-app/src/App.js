@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import './App.css';
-import Card from './practice/Card.js';
-import PropsExample from './practice/PropsExample.js';
-import Lists from './practice/Lists.js';
-import Conditional from './practice/Conditional.js';
+//import Card from './practice/Card.js';
+//import PropsExample from './practice/PropsExample.js';
+//import Lists from './practice/Lists.js';
+//import Conditional from './practice/Conditional.js';
 function App() {
   /* return (
     <div className="App">
@@ -32,6 +32,8 @@ function App() {
     <Card/>
     </>
    ); */
+   const name = "Siri";
+   console.log(name);
    return (
     <>
     {/* <Card/>

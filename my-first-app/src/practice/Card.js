@@ -1,6 +1,6 @@
 //import React from "react";
-import logo from './logo.svg';
-import styles from './index.css';
+import logo from './../logo.svg';
+import styles from './../index.css';
 
 
 function Card() {
