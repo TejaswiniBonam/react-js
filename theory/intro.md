@@ -243,7 +243,7 @@ return (
 ```
 
 ## Rendering Lists
-* Notice how <li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. 
+* Notice how <li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings to keep a track of them. 
 * Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items.
 ```js
 function Lists(){
@@ -269,6 +269,29 @@ function Lists(){
 }
 export default Lists;
 ```
+
+
+## Responding to events
+* Notice how onClick={handleClick} has no parentheses at the end! Do not call the event handler function: you only need to pass it down. 
+* React will call your event handler when the user clicks the button.
+```js
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+```
+
+## UPdate Screen
+* want your component to “remember” some information and display it.?
+* like count how many times a button is clicked??
+
 
 
 
@@ -304,9 +327,28 @@ function Counter() {
 ```
 
 **Explanation:**
+* You’ll get two things from useState: the current state and the function to update it
+
 - `useState(0)` creates a state variable `count` with an initial value of `0`.
 - `setCount` is a function used to update the value of `count`.
 - When the button is clicked, `setCount(count + 1)` updates the state, causing the component to re-render and display the new count.
 
 State allows components to create interactive and dynamic user interfaces.
+
+```js
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+```
+* React will call your component function again. This time, count will be 1. Then it will be 2. And so on.
 
