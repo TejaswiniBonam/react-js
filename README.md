@@ -20,6 +20,7 @@ https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-condi
 * js vs react
 * GHOST message problem
 * flow of react app execution
+* JS fragment
 
 
 

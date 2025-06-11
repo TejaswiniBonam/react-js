@@ -30,4 +30,9 @@ Most modern build tools (like Create React App, Next.js, or Vite) allow you to u
 - `App.js` – for a file with only JavaScript logic.
 - `App.jsx` – for a file containing React component code with JSX.
 
+React Developer Tools 
+React DevTools let you check the props and the state of your React components. You can find the React DevTools tab at the bottom of the browser section in CodeSandbox:
+
+
+LIFTING STATE UP
 

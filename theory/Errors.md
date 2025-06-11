@@ -36,3 +36,5 @@ This is App.js
 And when I checked console.. Siri is printed 2 times.. Like How did it print 2 times?? Isn't it just one time?
 
 
+* WHY CANT I GIVE AN INTEGER AS A PROP VALUE
+<TicTacToe value = 1>======> ERROR
