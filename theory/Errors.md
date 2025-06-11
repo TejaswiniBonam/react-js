@@ -38,3 +38,19 @@ And when I checked console.. Siri is printed 2 times.. Like How did it print 2 t
 
 * WHY CANT I GIVE AN INTEGER AS A PROP VALUE
 <TicTacToe value = 1>======> ERROR
+* props child to parent?
+
+
+ERROR
+boxClick is not defined
+ReferenceError: boxClick is not defined
+    at __WEBPACK_DEFAULT_EXPORT__ (http://localhost:3000/main.58292188339486a04946.hot-update.js:34:14)
+    at react-stack-bottom-frame (http://localhost:3000/static/js/bundle.js:15864:18)
+    at renderWithHooks (http://localhost:3000/static/js/bundle.js:6074:20)
+    at updateFunctionComponent (http://localhost:3000/static/js/bundle.js:7767:17)
+    at beginWork (http://localhost:3000/static/js/bundle.js:8353:16)
+    at runWithFiberInDEV (http://localhost:3000/static/js/bundle.js:3845:68)
+    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:10426:93)
+    at workLoopSync (http://localhost:3000/static/js/bundle.js:10319:38)
+    at renderRootSync (http://localhost:3000/static/js/bundle.js:10303:7)
+    at performWorkOnRoot (http://localhost:3000/static/js/bundle.js:10067:42)

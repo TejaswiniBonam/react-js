@@ -4,7 +4,7 @@ import './App.css';
 //import PropsExample from './practice/PropsExample.js';
 //import Lists from './practice/Lists.js';
 //import Conditional from './practice/Conditional.js';
-import Box from './practice/Box';
+import Game from './practice/TicTacToe/Game';
 function App() {
   /* return (
     <div className="App">
@@ -52,21 +52,7 @@ function App() {
     {/*<Conditional name="Rani" isEmp={true}/>
     <Conditional name="Joy" isEmp={false}/>*/}
     {/*<Lists/>*/}
-    <div>
-    <Box />
-    <Box />
-    <Box />
-    </div>
-    <div>
-    <Box />
-    <Box />
-    <Box />
-    </div>
-    <div>
-    <Box />
-    <Box />
-    <Box />
-    </div>
+    <Game />
     </>
    );
 
