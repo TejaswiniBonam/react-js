@@ -1,27 +1,27 @@
 import { useState } from 'react';
 
 
-export default function() {
+export default function({values, onBoxClick, onReset}) {
     return (
         <>
             <h1>Let's Play TicTacToe</h1>
             <div>
-                <Box value={values[0]} onBoxClick={() => { boxClicked(0); }} />
-                <Box value={values[1]} onBoxClick={() => { boxClicked(1); }} />
-                <Box value={values[2]} onBoxClick={() => { boxClicked(2); }} />
+                <Box value={values[0]} onBoxClick={() => { onBoxClick(0); }} />
+                <Box value={values[1]} onBoxClick={() => { onBoxClick(1); }} />
+                <Box value={values[2]} onBoxClick={() => { onBoxClick(2); }} />
             </div>
             <div>
-                <Box value={values[3]} onBoxClick={() => { boxClicked(3); }} />
-                <Box value={values[4]} onBoxClick={() => { boxClicked(4); }} />
-                <Box value={values[5]} onBoxClick={() => { boxClicked(5); }} />
+                <Box value={values[3]} onBoxClick={() => { onBoxClick(3); }} />
+                <Box value={values[4]} onBoxClick={() => { onBoxClick(4); }} />
+                <Box value={values[5]} onBoxClick={() => { onBoxClick(5); }} />
             </div>
             <div>
-                <Box value={values[6]} onBoxClick={() => { boxClicked(6); }} />
-                <Box value={values[7]} onBoxClick={() => { boxClicked(7); }} />
-                <Box value={values[8]} onBoxClick={() => { boxClicked(8); }} />
+                <Box value={values[6]} onBoxClick={() => { onBoxClick(6); }} />
+                <Box value={values[7]} onBoxClick={() => { onBoxClick(7); }} />
+                <Box value={values[8]} onBoxClick={() => { onBoxClick(8); }} />
             </div>
             <div>
-                <button onClick={reset}>Play Again</button>
+                <button onClick={onReset}>Play Again</button>
             </div>
         </>
     );
