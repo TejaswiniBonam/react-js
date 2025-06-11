@@ -40,6 +40,7 @@ https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-condi
 * list rendering
 * state management
 * named export, default export
+* naming convention
 
 
 
