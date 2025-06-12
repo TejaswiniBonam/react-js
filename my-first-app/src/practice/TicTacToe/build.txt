@@ -1,0 +1,52 @@
+1. TicTacToe Game
+2. 9 squares with some value or null
+3. form 3x3 matrix with the squares
+4. Fill "X" by clikcing each squares (each state for square)
+5. Alternate "X" / "O" filling based on #move
+6. compare all box values for that we need to check all boxes states soo get a parent component 
+7. lift the state
+8. Function to check winning chances
+9. if WON, stop further ability to click anything
+10. Add TIE situation
+
+
+
+1. <- -> buttons
+2. If user go back and changes any move, then the game should continue as some other new game
+3. play again button (if play again.. it should ask if they want to choose emojis again or continue with same)
+4. Maintain history of wins
+5. How About a scoreboard?? for each Emojii like emojis are reserved for each user
+
+
+
+
+
+
+
+
+
+1. Emojis instead of X and O 
+2. both players should select their own emojis before starting the game 
+3. Adding Keys to click on the X or O 
+4. animation or highlight the winning Line 
+5. 
+
+
+
+
+--------display------------
+Header
+
+Maybe a good background image
+in the centre, START GaME 
+    onclick = Ask for 2 emojis for 2 players(if they want to create new profiles.. The selected emojis should update in the score board)
+    After selecting both Another "START playing"
+    Board appears 
+    Status text appears 
+    <- -> buttons appear 
+    Some theme for win, lose, tie statements
+    highlighting winning Line 
+    score board updates (#wins, #loses)
+
+At the end Scoreboard button when clicked, it should appear
+footer

@@ -13,7 +13,11 @@ function Game() {
 
     let status = 'GAME ON PLAY MODE';
     if (checkResult(values)) {
+        if(checkResult(values)==="TIE"){
+            status = "IT'S A TIE!!"
+        }else{
         status = checkResult(values) + ' WON!!!';
+        }
     }
     console.log(status);
 
@@ -35,6 +39,8 @@ function Game() {
                 return values[winLines[i][0]];
             }
         }
+        if(!values.includes("."))
+            return "TIE";
         return null;
     }
 
