@@ -23,7 +23,7 @@ https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-condi
 * JS fragment
 
 
-
+* justify-content, Aligh items
 
 * components
 * types

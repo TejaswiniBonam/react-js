@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {default as Board} from './Board';
+import styles from './Box.css';
 
 
 
@@ -8,7 +9,7 @@ function Game() {
     const [values, setValues] = useState(Array(9).fill("."));
     console.log(values);
     const [move, setMove] = useState(0);
-    let turn = move % 2 === 0 ? 'X' : 'O';
+    let turn = move % 2 === 0 ? '❤️' : '💜';
     let newValues = values.slice();
 
     let status = 'GAME ON PLAY MODE';
@@ -61,10 +62,10 @@ function Game() {
 
 
     return (
-        <>
+        <div className='main'>
             <h1> Game</h1>
             <Board values={values} onBoxClick={boxClicked} onReset={reset} />
-        </>
+        </div>
     );
 }
 

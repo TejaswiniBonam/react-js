@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import styles from './Box.css';
 
 
 export default function({values, onBoxClick, onReset}) {
     return (
         <>
             <h1>Let's Play TicTacToe</h1>
+            <div className='board'> 
             <div>
                 <Box value={values[0]} onBoxClick={() => { onBoxClick(0); }} />
                 <Box value={values[1]} onBoxClick={() => { onBoxClick(1); }} />
@@ -20,9 +22,11 @@ export default function({values, onBoxClick, onReset}) {
                 <Box value={values[7]} onBoxClick={() => { onBoxClick(7); }} />
                 <Box value={values[8]} onBoxClick={() => { onBoxClick(8); }} />
             </div>
-            <div>
-                <button onClick={onReset}>Play Again</button>
             </div>
+            <div>
+                <button className='anyButton' onClick={onReset}>Play Again</button>
+            </div>
+            
         </>
     );
 }
@@ -36,6 +40,6 @@ function Box({ value, onBoxClick }) {
         console.log("CLICKED");
     }*/
     return (
-        <button onClick={onBoxClick}>{value}</button>
+        <button className='box'onClick={onBoxClick}>{value}</button>
     );
 }
