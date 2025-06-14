@@ -1,5 +1,12 @@
-## Export Import (named and default) import as, export as
+## Export Import (named and default) import as, 
+
+THIS IS A STANDARD JS SYNTAX NOT REACT
+
+
+export as
 https://javascript.info/import-export#export-before-declarations
+
+
 
 * They have several syntax
 ### Export before declarations
