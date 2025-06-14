@@ -99,6 +99,7 @@ These commands help you set up, run, and manage your React project efficiently.
 ## What is a Component?
 
 A **component** in React is a reusable, self-contained piece of UI. Components let you split the UI into independent, reusable parts, and think about each piece in isolation. **SHOULD START WITHA CAPITAL LETTER**
+* React components are regular JavaScript functions, but their names must start with a capital letter or they won’t work!
 
 There are two main types of components in React:
 
