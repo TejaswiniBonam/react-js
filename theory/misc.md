@@ -36,3 +36,52 @@ React DevTools let you check the props and the state of your React components. Y
 
 LIFTING STATE UP
 
+
+
+* during return()
+* Without parentheses, any code on the lines after return will be ignored! IF we have more than one element to return, parenthesis is MUST
+
+* components can be nested
+# what we see vs browser see
+```js
+ <section>
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
+    </section>
+```
+```js
+<section>
+  <h1>Amazing scientists</h1>
+  <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
+  <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
+  <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
+</section>
+```
+* **Components can render other components, but you must never nest their definitions:**
+
+https://react.dev/learn/preserving-and-resetting-state#different-components-at-the-same-position-reset-state
+
+```js
+export default function Gallery() {
+  // 🔴 Never define a component inside another component!
+  function Profile() {
+    // ...
+  }
+  // ...
+}
+```
+
+* when child component needs data pass it as props from parent not the other way around
+
+* Your React application begins at a “root” component. Usually, it is created automatically when you start a new project. 
+
+
+
+
+
+
+
+
+
