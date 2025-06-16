@@ -78,6 +78,8 @@ export default function Gallery() {
 * Your React application begins at a “root” component. Usually, it is created automatically when you start a new project. 
 
 
+* * Objects are not valid as React child
+
 
 
 
