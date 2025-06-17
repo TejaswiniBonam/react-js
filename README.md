@@ -59,6 +59,16 @@ https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-condi
 
 
 https://jsonplaceholder.typicode.com/posts
+
+
+
+
+* what why react
+* library vs framework
+* component
+* react frameworks
+* import and exports
+* 
         
 
 
