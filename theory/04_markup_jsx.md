@@ -93,6 +93,77 @@ https://react.dev/reference/react-dom/components/common
 
 
 
+# JS in JSX in {}
+* JSX lets you write HTML-like markup inside a JavaScript file, keeping rendering logic and content in the same place.
+
+```jsx
+export default function Avatar() {
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  const name = 'Gregorio Y. Zara';
+  return (
+    <img
+      className="avatar"
+      src={avatar}
+      alt={description}
+    />
+    <h1>{name}'s To Do List</h1>
+  );
+}
+```
+
+# double curlies {{}}
+* you can even pass objects in JSX.
+*  to pass a JS object in JSX, you must wrap the object in another pair of curly braces: `person={{ name: "Hedy Lamarr", inventions: 5 }}.`
+```jsx
+export default function TodoList() {
+  return (
+    <ul style={{
+      backgroundColor: 'black',
+      color: 'pink'
+    }}>
+      <li>Improve the videophone</li>
+      <li>Prepare aeronautics lectures</li>
+      <li>Work on the alcohol-fuelled engine</li>
+    </ul>
+  );
+}
+```
+
+* **Inline style properties are written in camelCase. For example, HTML <ul style="background-color: black"> would be written as <ul style={{ backgroundColor: 'black' }}>  in your component.**
+
+```jsx
+const person = {
+  name: 'Gregorio Y. Zara',
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
+
+export default function TodoList() {
+  return (
+    <div style={person.theme}>
+      <h1>{person.name}'s Todos</h1>
+      <img
+        className="avatar"
+        src="https://i.imgur.com/7vQD0fPs.jpg"
+        alt="Gregorio Y. Zara"
+      />
+    </div>
+  );
+}
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
