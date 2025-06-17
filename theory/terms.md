@@ -41,3 +41,5 @@
 
 
 * **SVG** - 
+* **Arbitrary JSX** - ???
+* **side effect (acc to react)** - refers to any change or interaction a function has that goes beyond just computing and returning a value. It means the function does something that affects the outside world or relies on external state, making it less predictable.

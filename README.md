@@ -75,6 +75,9 @@ https://jsonplaceholder.typicode.com/posts
 * JSX rules and difference in attribute names and exceptions
 * js in jsx
 * what is svg
+* props, default props
+* changing props
+* jsx as a child ({children})
 
 
         

@@ -6,7 +6,7 @@
 * The props you can pass to an `<img>` tag are predefined (ReactDOM conforms to the HTML standard). `But you can pass any props to your own components,`
 
 ## characteristics
-* Immutable - child component can't modify its props
+* Immutable - child component can't modify its props, Wont throw error if u does, but it's a bad practice
 * customizable - parent comp defines it 
 * Any data type - values, pbjects, functions etc etc
 
@@ -73,7 +73,7 @@ function Parent(propss){
 
 
 
-# passing JSX as children
+# passing JSX as children ???????
 * common to nest built-in browser tags `<div> <img /> </div>`
 * smtimes we nest Our own comps in same way
 ```jsx
@@ -81,6 +81,55 @@ function Parent(propss){
     <Comp2 />
 </Comp1>
 ```
+* Soo `Comp2` is INSIDE `Comp1`
+* That means, We should Send `Comp2` to `Comp1` as a prop which is called `children`
+* `children` **word is a must**, unlike `props` where we can replace it with any other word.
+```jsx
+function Comp1({ children}){
+  return(
+    <div>
+      {children}
+    </div>
+  )
+}
+function Comp2(){
+  return <h1> HII </h1>
+}
+function Comp3(){
+  return(
+    <Comp1>
+        <Comp2>
+    </Comp1>
+  )
+}
+```
+* Not Just ANother element, But We can ALso have Any other tags inplace of `Comp2`.
+* Basically, `Comp1` DOESN't need to Know whatever this `children` is!!!
+
+
+# props may change over time?
+* YES THEY CAN
+```js
+export default function Clock({ color, time }) {
+  return (
+    <h1 style={{ color: color }}>
+      {time}
+    </h1>
+  );
+}
+```
+* here {time} is current time
+* CHanging props didn't throw error to me
+* It just affected all over other components who get the same props
+* becuz, prop name is just a reference to the original object location.. so when we change it.. It will change ALL over..
+
+
+
+
+
+
+
+
 
 
 
