@@ -20,3 +20,15 @@
 * **search engine results pages (SERPs)** - page displayed by a search engine in response to a user's query. it has types like organic results, paid, featured,, etc 
 * **AJAX**
 
+
+
+* **LIBRARY** - collection of pre-written code that you call to help you perform common tasks. Ycollection of pre-written code that you call to help you perform common tasks.
+* **FrameWork** - complete structure where the framework is in control, and it calls your code when needed. Ex- FrameWork
+
+* **render** - refers to the process of generating and displaying the UI based on the current state and props of a component.
+* Render = Convert JSX into real DOM elements that you see on the screen.
+## what happens when redner() / return() in class & functional components trigger
+* describes what ui should look like
+* convert jsx into dom elements
+* compare previous dom and update only changed parts of the dom
+
