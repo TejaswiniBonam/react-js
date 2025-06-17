@@ -1,6 +1,6 @@
 # components
 * React applications are built from isolated pieces of UI called components.
-* React component is a JavaScript function that you can sprinkle with markup. 
+* React component is a JavaScript function that you can sprinkle with markup and START WITH CAP LETTER. 
 * core concepts of react
 * **REUSABLE**
 * Components can be 
@@ -81,5 +81,10 @@ export default function Gallery() {
 
 * you won’t only use components for reusable pieces like buttons, but also for larger pieces like sidebars, lists, and ultimately, complete pages! 
 * React-based frameworks take this a step further. Instead of using an empty HTML file and letting React “take over” managing the page with JavaScript, they also generate the HTML automatically from your React components. This allows your app to show some content before the JavaScript code loads.
+
+
+* **seems like we can have more than one root components for the entire page**
+
+https://react.dev/learn/your-first-component#components-all-the-way-down
 
 

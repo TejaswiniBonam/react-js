@@ -1,9 +1,16 @@
-## Export Import (named and default) import as, 
+# root component
+* this is the top most component
+* acc to vite, the root component is in index.html
+* and then it is updated in main.jsx with App.jsx
+
+
+
+## Export Import (named and default) import as, export as
 
 THIS IS A STANDARD JS SYNTAX NOT REACT
 
 
-export as
+
 https://javascript.info/import-export#export-before-declarations
 
 
@@ -251,3 +258,9 @@ export {default} from './user.js'; // to re-export the default export
 
 
 ```
+
+
+
+
+
+# WHAT MAKES THE DIFFERENCE WHILE DEFAULT EXPORT AND NAMED EXPORT?? what changes ?

@@ -64,11 +64,19 @@ https://jsonplaceholder.typicode.com/posts
 
 
 * what why react
+* what is vite? why vite?
 * library vs framework
 * component
 * react frameworks
 * import and exports
-* 
+* SPA vs MPA
+* CSR vs SSR
+* root component
+* JSX rules and difference in attribute names and exceptions
+* js in jsx
+* what is svg
+
+
         
 
 

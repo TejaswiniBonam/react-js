@@ -39,3 +39,5 @@
 * A markup language is a way to add structure and meaning to text using tags or symbols. It tells the computer how to display or organize content, but doesn’t do any logic or computation like a programming language does.
 
 
+
+* **SVG** - 
