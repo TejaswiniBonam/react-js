@@ -58,4 +58,22 @@ ReferenceError: boxClick is not defined
 
 
     RENAMING A FILE??????????????????????
+
+
+
+# TriggerRerender.jsx:18 Uncaught TypeError: Cannot set properties of null (setting 'className') at default (TriggerRerender.jsx:18:37)
+* Trying to set a className on an element before it's rendered
+* The element you're trying to access doesn't exist in the DOM YET
+* Using document.getElementById() or similar method that returns null
+* Trying to access a ref before it's initialized
+```jsx
+const element = document.getElementById('my-element');
+if (element) {
+  element.className = 'new-class';
+}
+// or use useRef()
+```
+
+
+# Okay, I wanna count and print the count of rerendering in my console can I do that? can I make a count that tracks the number of time the page got rerendered
     
