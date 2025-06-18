@@ -171,6 +171,74 @@ export default function Toolbar() {
 
 
 # stopping propagation
+* Event handlers receive an event object as their only argument.
+* By convention, it’s usually called e, which stands for “event”. 
+```jsx
+element.addEventListener('click', function(e) {
+  // Event type (click, mouseover, keydown, etc.)
+  console.log('Event type:', e.type);
+  
+  // Element that triggered the event
+  console.log('Target:', e.target);
+  
+  // Element that the handler is attached to (may differ from target)
+  console.log('Current target:', e.currentTarget);
+  
+  // Mouse position
+  console.log('Coordinates:', e.clientX, e.clientY);
+  
+  // Keyboard events
+  if (e.type === 'keydown') {
+    console.log('Key pressed:', e.key, 'Code:', e.code);
+  }
+  
+  // Prevent default behavior (like form submission)
+  e.preventDefault();
+  
+  // Stop event bubbling up the DOM
+  e.stopPropagation();
+});
+```
+*  If you want to prevent an event from reaching parent components, you need to call `e.stopPropagation() `
+
+```jsx
+function Button({ onClick, children }) {
+  return (
+    <button onClick={e => {
+      e.stopPropagation();
+      onClick();
+    }}>
+      {children}
+    </button>
+  );
+}
+
+export default function Toolbar() {
+  return (
+    <div className="Toolbar" onClick={() => {
+      alert('You clicked on the toolbar!');
+      {/*if u click this where 2 child buttons are not present  alert says u clicked on the tool bar*/}
+    }}>
+      <Button onClick={() => alert('Playing!')}>
+        Play Movie
+        {/*if u click this it says Playing*/}
+      </Button>
+      <Button onClick={() => alert('Uploading!')}>
+        Upload Image
+        {/*if u click this it says Uploading*/}
+      </Button>
+    </div>
+  );
+}
+```
+* **Steps**
+* onClick is passed to each
+* When Any of the `<Button />` is clicked - It goes to the component definition along with the handler prop which is defined in `<ToolBar />` and a line says `e.stopPropagation()` which resists the event handler to bubble up the tree.
+* Hence, Only child handlers run
+
+
+
+
 
 
 

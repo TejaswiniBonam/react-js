@@ -71,6 +71,7 @@ https://jsonplaceholder.typicode.com/posts
 * import and exports
 * SPA vs MPA
 * CSR vs SSR
+* DRY principle
 * root component
 * JSX rules and difference in attribute names and exceptions
 * js in jsx
@@ -78,6 +79,24 @@ https://jsonplaceholder.typicode.com/posts
 * props, default props
 * changing props
 * jsx as a child ({children})
+* conditional rendering- logical AND, bitwise AND , ternary
+* rendering lists - filter(), map()
+* key for items (list items, components)
+* key vs prop
+* pure function
+* impure function
+* side effect
+* StrictMode
+* UI tree / render tree
+* module dependency tree
+* event
+* event Handler - as props, propagation, 
+* Event Propagation Phases
+* addEventListener(event, function, useCapture, options);
+* useCapture
+
+
+
 
 
         
