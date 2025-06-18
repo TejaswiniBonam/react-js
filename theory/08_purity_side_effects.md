@@ -113,6 +113,27 @@ export default function TeaGathering() {
 * Event Handlers: The primary place for side effects in React. These are functions triggered by user actions 
 * React components must be pure during rendering—meaning they should only compute and return JSX based on props and state, without causing side effects.
 * Event handlers, however, execute later, only when a user interacts with the UI (e.g., clicking a button). They may Modify State or Trigger External Changes??
+
+🔄 Common Side Effects in React
+| **Category** |	**Example** |	**Why It’s a Side Effect** |
+|------------------|----------------|-------------|
+| 1. Data Fetching |	fetch() / axios.get() |	Reads from a server (external source) |
+| 2. Manual DOM Manipulation	| document.getElementById().style... |	Directly alters the DOM outside React’s control |
+| 3. Event Listeners |	window.addEventListener()	| Interacts with browser APIs outside render cycle |
+| 4. Subscriptions	| socket.on(...), Firebase listeners |	Opens a connection or registers a callback |
+| 5. Timers	| setTimeout(), setInterval()	| Executes code after delay / repeatedly |
+| 6. Local Storage / Session Storage |	localStorage.setItem() |	Writes to browser storage (outside React) |
+| 7. Logging / Analytics	| console.log, sendToAnalytics() |	Doesn’t affect rendering, but runs due to component behavior |
+| 8. Focus Management	| inputRef.current.focus()	| Manually shifts DOM focus |
+| 9. Mutation Observers / Resize Observers |	new ResizeObserver(...)	|Monitors DOM changes from outside React |
+| 10. Updating external state |	Updating Redux, Zustand, etc. in some cases	| Affects global state from component logic |
+| 11. Animations using imperative APIs	| gsap.to(), anime.js, vanilla JS animations	| Manipulates elements outside React’s declarative model |
+| 12. Cleanup logic	| return () => {...} in useEffect	| Necessary to undo subscriptions, timers, etc.|
+
+
+
+
+
 ```jsx
 function ShoppingCart() {
   const [items, setItems] = useState([]);
@@ -140,6 +161,8 @@ function ShoppingCart() {
 * Your components could run in a different environment—for example, on the server! Since they return the same result for the same inputs, one component can serve many user requests.
 * You can improve performance by skipping rendering components whose inputs have not changed. This is safe because pure functions always return the same results, so they are safe to cache.
 * 
+
+
 
 
 
