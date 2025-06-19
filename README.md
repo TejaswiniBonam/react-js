@@ -94,6 +94,8 @@ https://jsonplaceholder.typicode.com/posts
 * Event Propagation Phases
 * addEventListener(event, function, useCapture, options);
 * useCapture
+* Dom, virtual DOM
+* Controlled and Uncontrolled components
 
 
 

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-//import TriggerRerender from './practice/TriggerRerender'
+import TriggerRerender from './practice/TriggerRerender'
 import StateVsLocal from './practice/StateVsLocal'
 
 function App() {
@@ -31,15 +31,15 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    // <>
-    // <TriggerRerender />
-    // </>
+    <>
+    <TriggerRerender />
+    </>
     // <>
     //   <h1>WELCOME</h1>
     // </>
-    <>
-    <StateVsLocal />
-    </>
+    // <>
+    // <StateVsLocal />
+    // </>
   )
 }
 

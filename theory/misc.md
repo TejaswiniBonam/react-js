@@ -82,6 +82,14 @@ export default function Gallery() {
 
 
 
+The Real DOM only updates if the Virtual DOM comparison (diffing) finds changes.
+
+Initial Render: Virtual DOM is created → Real DOM is updated (full paint).
+
+Re-renders: New Virtual DOM is created → Compared with old one → Only the changed parts update in the Real DOM.
+
+
+
 
 
 
