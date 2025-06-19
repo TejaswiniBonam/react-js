@@ -237,6 +237,67 @@ export default function Toolbar() {
 * Hence, Only child handlers run
 
 
+# phases in Event Propagation
+## Capture Phase
+* Propagates from Parent to child until it hit the right element where handling event is needed
+## Target Phase
+* Hitting the right element for event handling
+## Bubble Phase
+* Bubbling up the tree to the parent components
+```jsx
+function App() {
+  return (
+    <div
+      onClickCapture={() => console.log("Outer (Capture)")}
+      onClick={() => console.log("Outer (Bubble)")}
+      style={{ padding: "30px", background: "#eee" }}
+    >
+      <button
+        onClickCapture={() => console.log("Button (Capture)")}
+        onClick={() => console.log("Button (Bubble)")}
+      >
+        Click Me
+      </button>
+    </div>
+  );
+}
+```
+* Output goes like
+```txt
+Outer (Capture)
+Button (Capture)
+Button (Bubble)
+Outer (Bubble)
+```
+
+
+# preventing default behaviour
+* Some browser events have default behavior associated with them. For example, a <form> submit event, which happens when a button inside of it is clicked, will reload the whole page by default:
+* You can call e.preventDefault() on the event object to stop this 
+```jsx
+export default function Signup() {
+  return (
+    <form onSubmit={e => {
+      e.preventDefault();
+      alert('Submitting!');
+    }}>
+      <input />
+      <button>Send</button>
+    </form>
+  );
+}
+```
+
+
+## side effects?
+* event handlers don’t need to be pure, so it’s a great place to change something
+* change an input’s value in response to typing, or change a list in response to a button press. 
+* In order to change some info u need a way to store it which is `State - a component's memory`
+
+
+
+
+
 
 
 
