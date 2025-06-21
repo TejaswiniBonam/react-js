@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import TriggerRerender from './practice/TriggerRerender'
 import StateVsLocal from './practice/StateVsLocal'
+import Game from './practice/TicTacToe/Game';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,15 +33,18 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    <>
-    <TriggerRerender />
-    </>
+    // <>
+    // <TriggerRerender />
+    // </>
     // <>
     //   <h1>WELCOME</h1>
     // </>
     // <>
     // <StateVsLocal />
     // </>
+    <>
+    <Game />
+    </>
   )
 }
 

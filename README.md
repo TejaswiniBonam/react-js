@@ -96,6 +96,15 @@ https://jsonplaceholder.typicode.com/posts
 * useCapture
 * Dom, virtual DOM
 * Controlled and Uncontrolled components
+* State
+* Hook
+* How rerendering Happens with setState()
+* render and commit
+* createRoot()
+* commit DOM
+* Browser paint - repainting screen by browser after react updates the dom
+
+
 
 
 

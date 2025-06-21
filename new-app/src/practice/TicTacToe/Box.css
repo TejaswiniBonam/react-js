@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(59, 59, 107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: cursive;
+}
+
+.main{
+    align-content: center;
+
+}
+
+.box {
+    /* padding: 50px; */
+    height:100px;
+    width:100px;
+    /*border-radius: 0px;*/
+    box-sizing: border-box;
+    /*font-size: x-large;*/
+}
+button{
+    border: solid;
+    border-color: rgb(50, 40, 70);
+    border-width: 5px;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

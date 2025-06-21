@@ -4,6 +4,8 @@
 * **private** - state belongs to its component only, unlike prop parent component dones't know anything about state of it's child
 * Components often need to change what’s on the screen as a result of an interaction. Typing into the form should update the input field, clicking “next” on an image carousel should change which image is displayed, clicking “buy” should put a product in the shopping cart. Components need to “remember” things: the current input value, the current image, the shopping cart. In React, this kind of component-specific memory is called state.
 
+* state is not like a regular variable that disappears after your function returns. State actually “lives” in React itself
+
 ```jsx
 import { useState } from "react";
 
@@ -81,6 +83,35 @@ React finishes the current function execution — it does not interrupt the curr
 After that, React triggers a re-render of the component with the updated state.
 
 The entire function runs again (because functional components are just functions), now with the new state value.
+
+
+
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 1);
+        setNumber(number + 1);
+        setNumber(number + 1);
+      }}>+3</button>
+    </>
+  )
+}
+```
+* The above Function should give 3 after rerendering  when the button is clicked 
+* But it gives 1
+* Setting state only changes it for the next render.
+
+
+
+
+
 
 
 # render and commit
