@@ -23,7 +23,7 @@ export default function(){
     
     // The initial value (0) is only used on the first render. After that, React "remembers" the current state (1, 2, etc.) even during re-renders.
     // Re-renders don’t re-execute useState(0).
-    // Here rerendering is in ur hands, when u click it rerenders but the above example.. It keeps rerenderinggg
+    // Here rerendering is in ur hands, when u click it rerenders but the above example. It keeps rerenderinggg
 
 
 }
