@@ -1,7 +1,7 @@
 # pure js functions
 * which minds it's own business
 * same input - same output
-* like y=2x for every (x, y) there is fixed output
+* like y=2x for every (x, y) there is fixed output.
 ```js
 function double(number) {
   return 2 * number;
