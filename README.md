@@ -107,6 +107,7 @@ https://jsonplaceholder.typicode.com/posts
 * e in js (element not event)
 * batching
 * state queue
+* js async concepts (async, await, callback, promise)
 
 
 
