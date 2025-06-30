@@ -103,6 +103,11 @@ https://jsonplaceholder.typicode.com/posts
 * createRoot()
 * commit DOM
 * Browser paint - repainting screen by browser after react updates the dom
+* state as a snapshot
+* e in js (element not event)
+* batching
+* state queue
+
 
 
 

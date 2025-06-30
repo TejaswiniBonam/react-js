@@ -178,3 +178,120 @@ function Clock() {
 * But <input> doesn't update cuz none of it's attributes changed over time
 * react preserves uncontrolled input state
 
+
+
+# state as a snapshot
+* state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.
+* tate is not like a regular variable that disappears after your function returns. State actually “lives” in React itself
+
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 1);
+        setNumber(number + 1);
+        setNumber(number + 1);
+      }}>+3</button>
+    </>
+  )
+}
+```
+* Notice that number only increments once per click!
+* **TRYE**
+* LETS SUBSTITUTE what happens when u click
+* setNumber(number + 1): number is 0 so setNumber(0 + 1).
+* React prepares to change number to 1 on the next render.
+* setNumber(number + 1): number is 0 so setNumber(0 + 1).
+* React prepares to change number to 1 on the next render.
+* setNumber(number + 1): number is 0 so setNumber(0 + 1).
+* React prepares to change number to 1 on the next render.
+* Even though you called setNumber(number + 1) three times, in this render’s event handler number is always 0, so you set the state to 1 three times.
+
+
+# STATE OVER TIME
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 5);
+        alert(number);
+      }}>+5</button>
+    </>
+  )
+}
+```
+* Here, Alert sends the previous number rather than updated one cuz, the number changes for the next render
+* `setNumber(0 + 5); alert(0);` subsitution
+## async
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    <>
+      <h1>{number}</h1>
+      <button onClick={() => {
+        setNumber(number + 5);
+        setTimeout(() => {
+          alert(number);
+        }, 3000);
+      }}>+5</button>
+    </>
+  )
+}
+```
+* Even tho u use async methods like setTimeout.. The rerender happens ignoring setTimeOUt.
+* BUT, AGAIN SUBSTITUTE.. the setTimeOUt was caleld in the previous render so the call was `setTimeOut(alert(old_number));`
+* so IT DOESN't CHANGE
+## TRY THIS
+```jsx
+export default function Form() {
+  const [to, setTo] = useState('Alice');
+  const [message, setMessage] = useState('Hello');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setTimeout(() => {
+      alert(`You said ${message} to ${to}`);
+    }, 5000);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        To:{' '}
+        <select
+          value={to}
+          onChange={e => setTo(e.target.value)}>
+          <option value="Alice">Alice</option>
+          <option value="Bob">Bob</option>
+        </select>
+      </label>
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={e => setMessage(e.target.value)}
+      />
+      <button type="submit">Send</button>
+    </form>
+  );
+}
+```
+* `look up for e in js, which is for element where the event has happened and form things in js etc`
+
+* **React keeps the state values “fixed” within one render’s event handlers.**
+
