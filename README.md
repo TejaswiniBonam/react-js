@@ -111,6 +111,10 @@ https://jsonplaceholder.typicode.com/posts
 * stale closure
 * update objects as a state
 * mutation (mutable, Immutable)
+* Updating object state with SPREAD
+* Updating nested object state
+* Are Objects nested or NOT?
+* Immer Library
 
 
 
