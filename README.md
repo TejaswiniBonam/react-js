@@ -109,6 +109,8 @@ https://jsonplaceholder.typicode.com/posts
 * state queue
 * js async concepts (async, await, callback, promise)
 * stale closure
+* update objects as a state
+* mutation (mutable, Immutable)
 
 
 
