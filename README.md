@@ -108,6 +108,8 @@ https://jsonplaceholder.typicode.com/posts
 * batching
 * state queue
 * js async concepts (async, await, callback, promise)
+* stale closure
+
 
 
 
