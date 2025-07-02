@@ -89,6 +89,127 @@ Initial Render: Virtual DOM is created → Real DOM is updated (full paint).
 Re-renders: New Virtual DOM is created → Compared with old one → Only the changed parts update in the Real DOM.
 
 
+import {useState} from 'react';
+export default function EditProfile() {
+  const [f, setF] = useState('Jane');
+  const [l, setL] = useState('Jacobs');
+  const [b, setB] = useState(true);
+  function fchange(e){
+    setF(e.target.value);
+  }
+  function lchange(e){
+    setL(e.target.value);
+  }
+  function handles(e){
+    e.preventDefault();
+    setB(!b);
+   // e.textContent = b ? 'Save Profile' : 'Edit Profile'; WE CANT MANIPULATE DOM DIRECTLY.. so use STATE
+  }
+  
+  return (
+    <form>
+      <label>
+        First name:{' '}
+        {!b && <b id='fb'>{f}</b>}
+        {b && <input value={f} onChange={e=>fchange(e)}/> }
+      </label>
+      <label>
+        Last name:{' '}
+        {!b && <b id='lb'>{l}</b> }
+        {b && <input value={l} onChange={e=>lchange(e)}/> }
+      </label>
+      <button id='bb' type="submit" onClick={e=>handles(e)} >
+        {b ? 'Save Profile' : 'Edit Profile'}
+      </button>
+      <p><i>Hello, {f} {l}!</i></p>
+    </form>
+  );
+}
+
+
+
+import { useState } from 'react';
+import { foods, filterItems } from './data.js';
+
+export default function FilterableList() {
+  const [query, setQuery] = useState('');
+  const results = filterItems(foods, query);
+
+  function handleChange(e) {
+    setQuery(e.target.value);
+  }
+
+  return (
+    <>
+      <SearchBar
+        query={query}
+        onChange={handleChange}
+      />
+      <hr />
+      <List items={results} />
+    </>
+  );
+}
+
+function SearchBar({ query, onChange }) {
+  return (
+    <label>
+      Search:{' '}
+      <input
+        value={query}
+        onChange={onChange}
+      />
+    </label>
+  );
+}
+
+function List({ items }) {
+  return (
+    <table>
+      <tbody> 
+        {items.map(food => (
+          <tr key={food.id}>
+            <td>{food.name}</td>
+            <td>{food.description}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+export function filterItems(items, query) {
+  query = query.toLowerCase();
+  return items.filter(item =>
+    item.name.split(' ').some(word =>
+      word.toLowerCase().startsWith(query)
+    )
+  );
+}
+
+export const foods = [{
+  id: 0,
+  name: 'Sushi',
+  description: 'Sushi is a traditional Japanese dish of prepared vinegared rice'
+}, {
+  id: 1,
+  name: 'Dal',
+  description: 'The most common way of preparing dal is in the form of a soup to which onions, tomatoes and various spices may be added'
+}, {
+  id: 2,
+  name: 'Pierogi',
+  description: 'Pierogi are filled dumplings made by wrapping unleavened dough around a savoury or sweet filling and cooking in boiling water'
+}, {
+  id: 3,
+  name: 'Shish kebab',
+  description: 'Shish kebab is a popular meal of skewered and grilled cubes of meat.'
+}, {
+  id: 4,
+  name: 'Dim sum',
+  description: 'Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch'
+}];
+
+
+
 
 
 

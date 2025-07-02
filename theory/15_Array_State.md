@@ -207,3 +207,53 @@ nextList[0].seen = true; // Problem: mutates list[0]
 setList(nextList);
 ```
 *
+
+# Changing object in array
+
+
+
+
+# misc things about state
+* Avoid too many states
+* Avoid duplicates
+* When u r developing somthing
+    * First, define How many states/changes ur UI should acc toseveral state changes
+    * Ex: A form should be disabled when it is submitted.. submit button should be disabled when nothing is filled in the form.. and after submission ui should have some feedback
+    * Sort all of them out and define the types of UI templates(without logic)
+    * Now carefully lise the states
+    * Combine the UI templates with Logic
+
+## principles for structuring state
+* **group related states** - if u always update 2/more states tigether make it single
+* **avoid contradictions** - no 2 states should conflict each other (like isSending, isSent for a form)
+* **avoid redundant state** - 2 states that have same memory houldn't be there
+* **avoid deeply nested state** - make ur state as simple as u can
+
+
+
+
+# IMP
+## Do not mirror props in state
+```jsx
+function Message({ messageColor }) {
+  const [color, setColor] = useState(messageColor);
+```
+* let's say messageCOlor is 'red' at start
+* But in middle of development in parent component you changed the prop color.. But It won't be updated in color state
+```jsx
+import { useState } from 'react';
+
+export default function Clock(props) {
+  const [color, setColor] = useState(props.color);
+  return (
+    <h1 style={{ color: color }}>
+      {props.time}
+    </h1>
+  );
+}
+//you can add below line to correct this
+if(props.color !== color){
+    setColor(props.color);
+  }
+```
+* try changing color prop in the parent component

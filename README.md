@@ -115,6 +115,10 @@ https://jsonplaceholder.typicode.com/posts
 * Updating nested object state
 * Are Objects nested or NOT?
 * Immer Library
+* Sharing state among components
+* lifting state up
+* what is controlled and uncontrolled component
+* single source of truth principle
 
 
 
