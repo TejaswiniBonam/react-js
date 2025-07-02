@@ -209,6 +209,165 @@ export const foods = [{
 }];
 
 
+import { useState } from 'react';
+
+export default function App() {
+  const [showB, setShowB] = useState(true);
+  return (
+    <div>
+      <Counter />
+      {showB && <Counter />} 
+      <label>
+        <input
+          type="checkbox"
+          checked={showB}
+          onChange={e => {
+            setShowB(e.target.checked)
+          }}
+        />
+        Render the second counter
+      </label>
+    </div>
+  );
+}
+
+function Counter() {
+  const [score, setScore] = useState(0);
+  const [hover, setHover] = useState(false);
+
+  let className = 'counter';
+  if (hover) {
+    className += ' hover';
+  }
+
+  return (
+    <div
+      className={className}
+      onPointerEnter={() => setHover(true)}
+      onPointerLeave={() => setHover(false)}
+    >
+      <h1>{score}</h1>
+      <button onClick={() => setScore(score + 1)}>
+        Add one
+      </button>
+    </div>
+  );
+}
+
+-----------
+import { useState } from 'react';
+
+export default function App() {
+  const [isFancy, setIsFancy] = useState(false);
+  if (isFancy) {
+    return (
+      <div>
+        <Counter isFancy={true} />
+        <label>
+          <input
+            type="checkbox"
+            checked={isFancy}
+            onChange={e => {
+              setIsFancy(e.target.checked)
+            }}
+          />
+          Use fancy styling
+        </label>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <Counter isFancy={false} />
+      <label>
+        <input
+          type="checkbox"
+          checked={isFancy}
+          onChange={e => {
+            setIsFancy(e.target.checked)
+          }}
+        />
+        Use fancy styling
+      </label>
+    </div>
+  );
+}
+
+function Counter({ isFancy }) {
+  const [score, setScore] = useState(0);
+  const [hover, setHover] = useState(false);
+
+  let className = 'counter';
+  if (hover) {
+    className += ' hover';
+  }
+  if (isFancy) {
+    className += ' fancy';
+  }
+
+  return (
+    <div
+      className={className}
+      onPointerEnter={() => setHover(true)}
+      onPointerLeave={() => setHover(false)}
+    >
+      <h1>{score}</h1>
+      <button onClick={() => setScore(score + 1)}>
+        Add one
+      </button>
+    </div>
+  );
+}
+-----------------
+import { useState } from 'react';
+
+export default function App() {
+  const [reverse, setReverse] = useState(false);
+  let checkbox = (
+    <label>
+      <input
+        type="checkbox"
+        checked={reverse}
+        onChange={e => setReverse(e.target.checked)}
+      />
+      Reverse order
+    </label>
+  );
+  if (reverse) {
+    return (
+      <>
+        <Field label="Last name" /> 
+        <Field label="First name" />
+        {checkbox}
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Field label="First name" /> 
+        <Field label="Last name" />
+        {checkbox}
+      </>
+    );    
+  }
+}
+
+function Field({ label }) {
+  const [text, setText] = useState('');
+  return (
+    <label>
+      {label}:{' '}
+      <input
+        type="text"
+        value={text}
+        placeholder={label}
+        onChange={e => setText(e.target.value)}
+      />
+    </label>
+  );
+}
+
+-------------------
 
 
 

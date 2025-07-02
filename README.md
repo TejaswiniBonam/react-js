@@ -119,6 +119,18 @@ https://jsonplaceholder.typicode.com/posts
 * lifting state up
 * what is controlled and uncontrolled component
 * single source of truth principle
+* preserve and reset state of a component
+* state is maintained as long as the component is being rendered
+* resetting state
+* preserving state.. 
+* position of component in render tree matters NOT MARKUP
+* ALL react sees is the render tree.. not ur code
+* same position in render tree but resetting state
+* key for a component
+* useReducer() Hook
+
+
+
 
 
 
