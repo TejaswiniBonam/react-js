@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #92aa83;
+    height: 10vh;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.navItem {
+    text-decoration: none;
+    padding: 30px 30px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.HeadText {
+    font-size: 3rem;
+}  
+
+.footer {
+    background-color: #92aa83;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
