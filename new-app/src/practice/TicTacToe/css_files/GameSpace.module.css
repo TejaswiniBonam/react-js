@@ -1,0 +1,26 @@
+
+
+.gamespace{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: cursive;
+}
+.playerSettings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 20vh;
+    padding: 10px 0px;
+    gap: 20px;
+    
+}
+.boardspace{
+    display: flex;
+}
+.status{
+    color: black;
+    width: 300px;
+    font-family: cursive;
+}
