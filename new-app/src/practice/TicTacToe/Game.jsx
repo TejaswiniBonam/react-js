@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import {default as Board} from './Board';
-import './Box.css';
-
-
+import './styles/Box.css';
 
 
 function Game() {

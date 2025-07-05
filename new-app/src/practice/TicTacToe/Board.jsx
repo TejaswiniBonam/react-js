@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Box.css';
+import './styles/Box.css';
 
 
 export default function({values, onBoxClick, onReset}) {

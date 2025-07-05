@@ -50,3 +50,16 @@ in the centre, START GaME
 
 At the end Scoreboard button when clicked, it should appear
 footer
+
+
+
+
+-------------------------------
+color palatte
+
+#533B4D
+#F564A9
+#FAA4BD
+#FAE3C6
+
+
