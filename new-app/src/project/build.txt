@@ -38,3 +38,10 @@ DEBUGGING
     * based on drop down.. Align all posts cards
     * get posts using axios
 * footer
+
+
+
+
+FLOW
+1 - login
+2 - web page

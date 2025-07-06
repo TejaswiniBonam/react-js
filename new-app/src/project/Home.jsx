@@ -1,72 +1,51 @@
 import {useState} from 'react';
-import axios from 'axios';
+import Header from './Header';
+import Footer from './Footer';
+import NaviBar from './NaviBar';
+import LoginForm from './LoginForm';
+import GetUsers from './GetUsers';
+import GetPosts from './GetPosts';
 
 export default function Home(){
-    getUsers();
+    const [active, setActive] = useState('Home');
+    const [isLoggedIn, setIsLoggedIn] = useState('false');
+    const [users, setUsers] = useState([]); //state lifted up from GetUsers to here
     return(
         <>
         <Header />
-        <NaviBar />
+        <NaviBar 
+            setActive={setActive}
+            isLoggedIn = {isLoggedIn}
+        />
+        {active==='Home' && <h1>WELCOME</h1>}
+        {active==='Users' && (
+            <>
+            <h1>USERS</h1>
+            <GetUsers users={users} setUsers={setUsers}/>
+            </>
+        )}
+        {active==='Posts' && (
+            <>
+            <h1> POSTS </h1>
+            <GetPosts />
+            </>
+        )} 
+        {active==='SignIn' && (
+            <LoginForm users={users}/>
+        )}
+
         <Footer />
         </>
     );
 }
 
 
-function NaviBar(){
-    return(
-        <div>
-            <nav>
-                <li><a>Home</a></li>
-                <li><a>Posts</a></li>
-                <li><a>About Us</a></li>
-            </nav>
-        </div>
-    );
-}
 
 
-function Header(){
-    return(
-    <div>
-        <h1>JSONPlaceholder Viewer</h1>
-    </div>
-    );
-}
 
-function Footer(){
-    return(
-        <div>
-            <p>This is footer</p>
-        </div>
-    );
-}
 
-function Posts(){
-    const [posts, setPosts] = useState([]);
 
-}
 
-async function getPosts(){
-    try{
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-        const postList = response.data;
-        //console.log(userList.data);
-    }
-    catch(Error){
-        alert(Error);
-    }
 
-}
-async function getUsers(){
-    try{
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        //console.log(userList.data);
-        const userList = response.data;
-    }
-    catch(Error){
-        alert(Error);
-    }
 
-}
 
