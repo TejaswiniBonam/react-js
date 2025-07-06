@@ -1,0 +1,40 @@
+Home page lo welcome msg and nav bar vundi andulo post1, 
+post2,.., about and contact pages vundali tarwata theme 
+pettali footer kinda dummy data like about the website ala. 
+Post1 data matrem json placeholder lo vunna users di teesukomandi
+
+
+Nav bar
+	post 1 2 3... about us, contact -> 
+react fragment, react navgigation Axios
+one tab - call axios using api
+another - call apis using fetch
+
+FOOTER having about page, dummy data , contacts
+3 themes - day mode, night, any other. high contrast
+ 
+1st  page - login 
+2 - application - 4 nav tabs, p1, 2, 3, 
+each post - details user X
+
+front - description, dummy data..
+
+--react, redux, typescript
+
+DEBUGGING
+
+
+
+
+
+
+* Header, NavBar, content, footer
+* Header - heading
+* NavBar
+    * HomePage
+    * Users drop down (get Users using fetch)
+    * About Us
+* content
+    * based on drop down.. Align all posts cards
+    * get posts using axios
+* footer
