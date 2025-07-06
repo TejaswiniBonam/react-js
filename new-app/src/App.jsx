@@ -1,11 +1,15 @@
 import Game from './practice/TicTacToe/Game'
+import Home from './project/Home';
 
 
 function App() {
 
   return (
+    // <>
+    //   <Game/>
+    // </>
     <>
-      <Game/>
+      <Home />
     </>
   );
 }
