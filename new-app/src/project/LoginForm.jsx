@@ -12,7 +12,7 @@ export default function LoginForm({users}){
         return status;
     }
     return(
-        <div>
+        <div className='LoginForm'>
                 <h2>Login Here</h2>
                 <form onSubmit={handleFormSubmit}>
                     <div>
