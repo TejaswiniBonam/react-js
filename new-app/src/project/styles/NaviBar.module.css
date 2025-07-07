@@ -1,0 +1,28 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.navItem {
+    text-decoration: none;
+    padding: 30px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.navItem.Light{
+    color: black;
+}
+.navItem.Dark{
+    color: white;
+}
+.navItem.Ocean{
+    color: black;
+}
+.toggleMode{
+    border: none;
+    background-color: transparent;
+}
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}

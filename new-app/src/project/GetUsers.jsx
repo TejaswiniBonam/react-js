@@ -1,17 +1,6 @@
 import {useState, useEffect, act} from 'react';
-
-export default function GetUsers({users, setUsers}){
-    
-    useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response=>{
-            return response.json();
-        })
-        .then(data => {
-            setUsers(data);
-        })
-        .catch(error => alert(error));
-    }, []);
+import styles from './styles/GetUsers.module.css';
+export default function GetUsers({users, theme}){
     return(
         <div>
             {users.map(user=>(
