@@ -1,28 +1,36 @@
 .navBar {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
+    padding: 0rem 1rem;
+    
 }
+
 .navItem {
     text-decoration: none;
     padding: 30px 30px;
     font-size: 1.5rem;
     cursor: pointer;
 }
-.navItem.Light{
+
+.navItem.Light {
     color: black;
 }
-.navItem.Dark{
+
+.navItem.Dark {
     color: white;
 }
-.navItem.Ocean{
+
+.navItem.Ocean {
     color: black;
 }
-.toggleMode{
+
+.toggleMode {
     border: none;
     background-color: transparent;
 }
-.disabled{
+
+.disabled {
     opacity: 0.5;
     pointer-events: none;
 }

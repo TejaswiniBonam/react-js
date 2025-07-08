@@ -1,5 +1,6 @@
 import styles from './styles/NaviBar.module.css'
 
+
 export default function NaviBar({setActive, loggedIn, theme, setTheme}){
 
     function handleTheme(){
@@ -36,7 +37,10 @@ export default function NaviBar({setActive, loggedIn, theme, setTheme}){
                     onClick={()=>setActive('Users')}>
                         Users
                 </a>
-                <a className={`${styles.navItem} ${styles[theme.name]}`}  >
+                <a className={`${styles.navItem} ${styles[theme.name]}`}
+                    href='https://jsonplaceholder.typicode.com/'
+                    target = '_blank' 
+                 >
                         About Us
                 </a>
                 <a className={`${styles.navItem} ${styles[theme.name]}`}  
@@ -50,4 +54,5 @@ export default function NaviBar({setActive, loggedIn, theme, setTheme}){
             </nav>
         </div>
     );
+
 }

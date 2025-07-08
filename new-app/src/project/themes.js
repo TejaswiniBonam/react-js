@@ -4,7 +4,7 @@ const themes = {
     name: 'Light',
     bgColor: '#f8f9fa',
     textColor: '#212529',
-    secondaryColor: '#e9ecef',
+    secondaryColor: '#9aa0a6',
     accentColor: '#97c6f7'
   },
   dark: {

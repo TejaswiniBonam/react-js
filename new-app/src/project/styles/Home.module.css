@@ -1,5 +1,25 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
+/* Global base (optional, useful for themes) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
 }
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  min-height: 40vh;
+  text-align: center;
+}
+
+.home h1 {
+    text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+
+

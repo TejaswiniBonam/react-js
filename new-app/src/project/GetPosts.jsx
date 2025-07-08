@@ -41,7 +41,7 @@ export default function GetPosts({ theme }) {
                 {filteredPosts.map(post => (
                     <div className={`${styles.postCard} ${styles[theme.name]}`} key={post.id}>
                         <div>
-                            <h3>By {post.userId}</h3>
+                            <h3>By User {post.userId}</h3>
                             <h3>{post.title}</h3>
                             <p>{post.body}</p>
                         </div>
