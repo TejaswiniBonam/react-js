@@ -128,7 +128,7 @@ https://jsonplaceholder.typicode.com/posts
 * same position in render tree but resetting state
 * key for a component
 * useReducer() Hook
-* prop drilling
+* prop drillin
 * context and reducer combo
 
 
