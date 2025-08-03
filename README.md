@@ -1,4 +1,4 @@
-# react-js
+# react js
 
 https://react.dev/reference/react/hooks
 
